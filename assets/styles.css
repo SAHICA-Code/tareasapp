@@ -479,3 +479,21 @@ header h1 {
         font-size: 0.9rem;
     }
 }
+
+.task-input.nueva-tarea-container {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-input.nueva-tarea-container input {
+    flex: 1;
+    margin: 0;
+}
+
+.task-input.nueva-tarea-container button {
+    width: auto;
+    height: auto;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+}
