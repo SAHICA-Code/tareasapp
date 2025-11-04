@@ -108,13 +108,11 @@ $porcentaje = $total > 0 ? round(($completadas / $total) * 100) : 0;
         <a href="logout.php" class="btn-logout <?= $porcentaje >= 100 && $total > 0 ? 'btn-success' : '' ?>">Cerrar sesión</a>
     </header>
 
-
     <p class="delete-account">
         <a href="delete_account.php" onclick="return confirm('¿Seguro que deseas eliminar tu cuenta? Esta acción no se puede deshacer.');">
             Eliminar cuenta
         </a>
     </p>
-
 
     <div class="progress-header">
         <p><?= $completadas ?> de <?= $total ?> tareas completadas</p>
@@ -147,7 +145,6 @@ $porcentaje = $total > 0 ? round(($completadas / $total) * 100) : 0;
                             <span class="toggle-subtasks" data-id="<?= $t["id"] ?>">▶</span>
                         <?php endif; ?>
                         <?= htmlspecialchars($t["titulo"]) ?>
-                        <span class="add-subtask" data-id="<?= $t["id"] ?>">➕ Subtarea</span>
                     </div>
                     <div class="task-actions">
                         <a href="?completar=<?= $t["id"] ?>">✔</a>
@@ -178,20 +175,13 @@ $porcentaje = $total > 0 ? round(($completadas / $total) * 100) : 0;
             <?php endforeach; ?>
         <?php endif; ?>
     </ul>
+
     <footer class="footer">
-        <p>Web hecha por <strong>Sara Hidalgo Caro </strong>· 2025</p>
+        <p>Web hecha por <strong>Sara Hidalgo Caro</strong> · 2025</p>
     </footer>
 </div>
 
 <script>
-document.querySelectorAll('.add-subtask').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-id');
-        const form = document.getElementById('form-sub-' + id);
-        form.classList.toggle('active');
-    });
-});
-
 document.querySelectorAll('.toggle-subtasks').forEach(btn => {
     btn.addEventListener('click', () => {
         const id = btn.getAttribute('data-id');
