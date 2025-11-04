@@ -129,9 +129,9 @@ $porcentaje = $total > 0 ? round(($completadas / $total) * 100) : 0;
         <p id="progress-message" class="visible">¡Todas las tareas finalizadas!</p>
     <?php endif; ?>
 
-    <form method="POST" class="task-input">
+    <form method="POST" class="task-input nueva-tarea-container">
         <input type="text" name="nueva_tarea" placeholder="Escribe una nueva tarea..." required>
-        <button type="submit">+</button>
+        <button type="submit" class="add-task-btn">+</button>
     </form>
 
     <ul id="task-list">

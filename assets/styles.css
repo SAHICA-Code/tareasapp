@@ -381,3 +381,101 @@ header h1 {
     object-fit: contain;
     border-radius: 6px;
 }
+
+/* Ajustes responsivos para móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 400px;
+        padding: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .task-container, .subtask-container {
+        padding: 0.6rem 0.8rem;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    button, .add-task-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .progress-bar {
+        height: 6px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajuste extra para pantallas muy pequeñas (móviles < 400px) */
+@media (max-width: 400px) {
+    body {
+        zoom: 0.9;
+    }
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* --- Input + botón en línea --- */
+.nueva-tarea-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+}
+
+.nueva-tarea-container input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    color: #111;
+}
+
+.nueva-tarea-container input:focus {
+    outline: none;
+    background-color: #e2e8f0;
+}
+
+.add-task-btn {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-task-btn:hover {
+    background-color: #1e40af;
+}
+
+/* Responsive: más compacto en móvil */
+@media (max-width: 480px) {
+    .nueva-tarea-container {
+        gap: 0.4rem;
+    }
+    .add-task-btn {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.8rem;
+    }
+    .nueva-tarea-container input {
+        font-size: 0.9rem;
+    }
+}
