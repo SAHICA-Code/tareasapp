@@ -350,3 +350,24 @@ header h1 {
         font-size: 1rem;
     }
 }
+
+/* ---------- ESPACIADO ENTRE ICONOS (tareas y subtareas) ---------- */
+.task-actions a,
+.subtask div a {
+    margin-left: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #2563eb;
+    transition: color 0.2s ease;
+}
+
+.task-actions a:first-child,
+.subtask div a:first-child {
+    margin-left: 0;
+}
+
+.task-actions a:hover,
+.subtask div a:hover {
+    color: #1d4ed8;
+}
+

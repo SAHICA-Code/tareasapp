@@ -98,21 +98,24 @@ $porcentaje = $total > 0 ? round(($completadas / $total) * 100) : 0;
 <body>
 <div class="container">
     <header>
-        <div id="user-info" class="logo-title">
-            <img src="assets/logo.png" alt="Logo" class="logo">
-            <div>
-                <h1>Mis tareas</h1>
-                <p id="user-name">Hola <?= htmlspecialchars($user_name) ?> 👋</p>
-            </div>
-        </div>
-        <a href="logout.php" class="btn-logout <?= $porcentaje >= 100 && $total > 0 ? 'btn-success' : '' ?>">Cerrar sesión</a>
+    <div id="user-info" class="logo-title">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <h1>Mis tareas</h1>
+    </div>
+
+    <a href="logout.php" class="btn-logout <?= $porcentaje >= 100 && $total > 0 ? 'btn-success' : '' ?>">Cerrar sesión</a>
     </header>
 
-    <p class="delete-account">
-        <a href="delete_account.php" onclick="return confirm('¿Seguro que deseas eliminar tu cuenta? Esta acción no se puede deshacer.');">
-            Eliminar cuenta
-        </a>
-    </p>
+    <!-- Nuevo bloque para el saludo y eliminar cuenta -->
+    <div class="user-bar">
+        <p id="user-name">Hola <?= htmlspecialchars($user_name) ?> 👋</p>
+        <p class="delete-account">
+            <a href="delete_account.php" onclick="return confirm('¿Seguro que deseas eliminar tu cuenta? Esta acción no se puede deshacer.');">
+                Eliminar cuenta
+            </a>
+        </p>
+    </div>
+
 
     <div class="progress-header">
         <p><?= $completadas ?> de <?= $total ?> tareas completadas</p>
