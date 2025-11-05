@@ -41,9 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <button type="submit">Entrar</button>
         </form>
         <p>¿No tienes cuenta? <a href="register.php">Regístrate</a></p>
-        <p>Cuenta de prueba demo@demo.com - demo123</p>
     </section>
     <footer class="footer">
+        <p>Cuenta de prueba demo@demo.com - demo123</p>
+        <br>
         <p>Web hecha por <strong>Sara Hidalgo Caro </strong>· 2025</p>
     </footer>
 </div>
